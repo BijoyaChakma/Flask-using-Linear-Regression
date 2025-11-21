@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Height Input Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            width: 200px;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 20px;
+            font-size: 16px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter Your Height</h2>
+
+    <form action="/predict" method="post">
+        <input type="text" name="height" placeholder="Enter height (cm)" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2 style="color: blueviolet;">{{prediction_data}}</h2>
+
+</body>
+</html>
